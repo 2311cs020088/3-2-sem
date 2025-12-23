@@ -13,6 +13,7 @@ max_frequency = 0
 for count in frequency.values():
     if count > max_frequency:
         max_frequency = count
+        
 modes = []
 for num, count in frequency.items():
     if count == max_frequency:
