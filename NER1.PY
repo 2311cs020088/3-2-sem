@@ -4,9 +4,7 @@ data = {
     "organization": ["MDV", "Google"]
 }
 sentence = "Vinay works at Google in Hyd, while Hajji is employed at MDV and lives in Singatam."
-
 ner_tags = []
-
 for word in sentence.split():
     if word.lower() in data["location"]:
         ner_tags.append((word, "LOCATION"))
@@ -16,5 +14,4 @@ for word in sentence.split():
         ner_tags.append((word, "ORGANIZATION"))
     else:
         ner_tags.append((word, "O"))
-
 print(ner_tags)
